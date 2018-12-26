@@ -5,17 +5,15 @@
     </ion-navbar>
   
   </ion-header>
-  
-  
-  <ion-content>
-      <!--
-    <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
-    </div>
-  
-    <div class="item-detail" padding>
-      <h2>{{item.name}}</h2>
-      <p>{{item.about}}</p>
-    </div>
-    -->
-    {{position}}
+    
+  <ion-content padding>
+    <ion-list>
+      <ion-item *ngFor="let temperature of temperatures">
+        <h2>Tem. Média: {{temperature.temp}}</h2>
+        <h2>Pressão: {{temperature.pressure}}</h2>
+        <h2>Umidade: {{temperature.humidity}}</h2>
+        <h2>Mínima: {{temperature.temp_min}}</h2>
+        <h2>Máxima: {{temperature.temp_max}}</h2>
+      </ion-item>
+    </ion-list>
   </ion-content>
